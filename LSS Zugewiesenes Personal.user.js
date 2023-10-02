@@ -30,7 +30,7 @@ function fetchAssignedPersonnel(vehicleId, row) {
             const assignedPersonnelCount = data.assigned_personnel_count;
             const buildingElement = row.querySelector('.mission_vehicle_label');
 
-            // Überprüfe, ob assignedPersonnelCount nicht null oder undefined ist, bevor du das span-Element erstellst
+            // Überprüfe, ob assignedPersonnelCount nicht null oder undefined ist
             if (assignedPersonnelCount !== null && assignedPersonnelCount !== undefined) {
                 const personnelDisplay = document.createElement('span');
                 // Füge eine CSS-Klasse hinzu, um die Personalanzahl rechtsbündig zu machen
@@ -54,7 +54,7 @@ function fetchAssignedPersonnel(vehicleId, row) {
         });
     }
 
-    // Warte 4 Sekunden, bevor das Skript die Fahrzeuge verarbeitet
+    // Warte 100 ms, bevor das Skript die Fahrzeuge verarbeitet
     setTimeout(function() {
         //console.log('Wartezeit abgelaufen. Verarbeite Fahrzeuge.');
         processVehicles();
